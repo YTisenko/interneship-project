@@ -49,9 +49,7 @@ def step_filter_products_by_want_to_buy(context):
 
 @then("Verify all cards have a 'want to buy' tag")
 def step_verify_cards_have_want_to_buy(context):
-    # expected_tag = context.driver.find_element(By.XPATH, "//div[@wized='saleTagMLS' and text()='Want to buy']")
-    # expected_tag='Want to buy'
-    all_cards = context.driver.find_element(By.XPATH,"//div[@wized='listingCardMLS']")
+    all_cards = context.driver.find_elements(By.XPATH,"//div[@wized='listingCardMLS']")
     all_cards_have_tag = True
     for card in all_cards:
         card_text=card.text
