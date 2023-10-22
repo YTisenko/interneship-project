@@ -13,7 +13,9 @@ def step_user_logs_in(context):
     email = "first@email.com"
     password = "careerist"
     email_field = context.driver.find_element(By.ID, "email-2")
+    sleep(3)
     password_field = context.driver.find_element(By.ID, "field")
+    sleep(3)
     continue_button = context.driver.find_element(By.XPATH, "//a[@wized='loginButton' and contains(text(), 'Continue')]")
     email_field.send_keys(email)
     password_field.send_keys(password)
@@ -31,7 +33,7 @@ def step_verify_correct_page(context):
     expected_url= "https://soft.reelly.io/secondary-listings"
     actual_url = context.driver.current_url
     assert expected_url == actual_url, f"Expected URL: {expected_url}, Actual URL: {actual_url}"
-
+    sleep(3)
 @when("User filters the products by 'want to buy'")
 def step_filter_products_by_want_to_buy(context):
     filter_element = context.driver.find_element(By.CSS_SELECTOR, ".filter-button")
@@ -46,6 +48,7 @@ def step_filter_products_by_want_to_buy(context):
     expected_url="https://soft.reelly.io/secondary-listings"
     actual_url=context.driver.current_url
     assert expected_url == actual_url, f"Expected URL: {expected_url}, Actual URL: {actual_url}"
+    sleep(3)
 
 @then("Verify all cards have a 'want to buy' tag")
 def step_verify_cards_have_want_to_buy(context):
