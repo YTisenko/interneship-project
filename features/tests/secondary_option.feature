@@ -1,6 +1,7 @@
 # Created by Yulia at 10/20/23
 Feature: Secondary Deals Filtering
 
+#  @allure.feature("Secondary_Deals_Filtering")
   Scenario: User can filter Secondary deals by "want to buy" option
     Given Open the main page
     When User logs in

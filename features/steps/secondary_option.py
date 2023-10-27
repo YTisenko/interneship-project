@@ -1,9 +1,10 @@
 from selenium.webdriver.common.by import By
 from behave import given, when, then
 from time import sleep
+import allure
 
 
-
+@allure.feature("Secondary Deals Filtering")
 @given("Open the main page")
 def step_open_main_page(context):
     context.driver.get("https://soft.reelly.io/sign-in")
