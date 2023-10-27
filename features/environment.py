@@ -45,20 +45,20 @@ def browser_init(context):
 
     ## BROWSERSTACK ###
     # # Register for BrowserStack, then grab it from https://www.browserstack.com/accounts/settingspip3 install -r requirements.txt
-    # bs_user = 'yulia_YNeRTd'
-    # bs_key = 'ZSaxRKmqUF8usu7ZWCXB'
-    # url = f'http://{bs_user}:{bs_key}@hub-cloud.browserstack.com/wd/hub'
-    #
-    # options = Options()
-    # bstack_options = {
-    #     "os": "OS X",
-    #     "osVersion": "Monterey",
-    #     "browserName": "Chrome",
-    #     "browserVersion": "latest",
-    #     "buildName": "browserstack-build-1",
-    #     "projectName": "BrowserStack Sample",
-    #     "sessionName": "Secondary Deals Filtering"
-    # }
+    bs_user = 'yulia_YNeRTd'
+    bs_key = 'ZSaxRKmqUF8usu7ZWCXB'
+    url = f'http://{bs_user}:{bs_key}@hub-cloud.browserstack.com/wd/hub'
+
+    options = Options()
+    bstack_options = {
+        "os": "OS X",
+        "osVersion": "Monterey",
+        "browserName": "Chrome",
+        "browserVersion": "latest",
+        "buildName": "browserstack-build-1",
+        "projectName": "BrowserStack Sample",
+        "sessionName": "Secondary Deals Filtering"
+    }
     # options.set_capability('bstack:options', bstack_options)
     # context.driver = webdriver.Remote(command_executor=url, options=options)
 
